@@ -1,11 +1,11 @@
 import Sidebar from "./MainComponents/Sidebar";
-import PatternCard from "./MainComponents/PatternCard";
+import PatternsPage from "./MainComponents/PatternsPage";
 
 function Homepage() {
   return (
     <div>
       <Sidebar></Sidebar>
-      <PatternCard></PatternCard>
+      <PatternsPage></PatternsPage>
     </div>
   );
 }

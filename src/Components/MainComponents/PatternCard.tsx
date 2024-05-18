@@ -1,17 +1,20 @@
-function PatternCard() {
+interface Props {
+  pattern: string;
+  descrizione: string;
+}
+
+function PatternCard({ pattern, descrizione }: Props) {
   return (
-    <>
-      <div className="">
-        <div>
-          <h3>Duis sit duis dolor cupidatat incididunt dolore</h3>
+    <div>
+      <div className="p-8 max-w-md w-full rounded-3xl overflow-hidden shadow-lg relative">
+        <div className="absolute inset-x-0 top-0 rounded-t-xl bg-green-600 text-center font-bold text-xl flex items-center justify-center h-12 truncate">
+          {pattern}
         </div>
-        <div>
-          Mollit aute esse incididunt velit sit aute aliqua nulla Lorem id nisi
-          consequat. Aliquip sit ullamco esse qui culpa cillum ad fugiat amet id
-          eiusmod do. Irure laborum fugiat ad ad eiusmod culpa cupidatat minim
+        <div className="mt-12 h-52 overflow-hidden">
+          <p className="text-gray-700 text-base">{descrizione}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 function UserCard() {
   return (
-    <div className="fixed bottom-0 left-0 mb-2 ml-2.5 max-w-xs bg-green-600 shadow-lg rounded-xl overflow-hidden ">
+    <div className="fixed bottom-0 left-0 mb-2 ml-2.5 max-w-xs bg-green-600 shadow-lg rounded-3xl overflow-hidden ">
       <div className="flex items-center px-2 py-1 relative">
         <figure aria-hidden="true">
           <a href="#0">
