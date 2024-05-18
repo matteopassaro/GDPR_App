@@ -1,13 +1,18 @@
-import Footer from "./Components/Footer";
-import Sidebar from "./Components/Sidebar";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Homepage from "./Components/Homepage";
+import Sidebar from "./Components/MainComponents/Sidebar";
+import Footer from "./Components/MainComponents/Footer";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <Sidebar></Sidebar>
-      <Footer></Footer>
-    </>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/Homepage" element={<Homepage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
