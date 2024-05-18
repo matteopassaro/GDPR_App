@@ -3,9 +3,11 @@ import PatternsPage from "./MainComponents/PatternsPage";
 
 function Homepage() {
   return (
-    <div>
-      <Sidebar></Sidebar>
-      <PatternsPage></PatternsPage>
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-grow p-4 ml-48 custom-scrollbar overflow-y-auto">
+        <PatternsPage />
+      </div>
     </div>
   );
 }

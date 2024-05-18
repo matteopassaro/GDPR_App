@@ -20,9 +20,13 @@ interface Attributes {
   CWE: string[];
 }
 
+interface Pattern {
+  id: number;
+  attributes: Attributes;
+}
 function PatternsPage() {
   const [error, setError] = useState<Error | null>(null);
-  const [patterns, setPatterns] = useState<Attributes[]>([]);
+  const [patterns, setPatterns] = useState<Pattern[]>([]);
 
   useEffect(() => {
     axios
@@ -34,14 +38,14 @@ function PatternsPage() {
   if (error) {
     return <div>An error occurred: {error.message}</div>;
   }
-  console.log(patterns);
+
   return (
-    <div className="grid grid-cols-4 gap-2">
-      {patterns.map((pattern, index) => (
+    <div className="pl-6 grid grid-cols-1 custom-scrollbar sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {patterns.map((pattern) => (
         <PatternCard
-          key={index}
-          pattern={pattern.Pattern}
-          descrizione={pattern.Descrizione}
+          key={pattern.id}
+          pattern={pattern.attributes.Pattern}
+          descrizione={pattern.attributes.Descrizione}
         />
       ))}
     </div>
