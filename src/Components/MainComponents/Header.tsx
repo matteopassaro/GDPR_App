@@ -1,10 +1,13 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <header className="w-full">
-      <div className="fixed top-0 left-0 w-48 px-4 py-4 text-lg font-semibold bg-green-600 rounded-b-xl shadow-lg">
-        <a href="http://localhost:3000/">
+      <div className="fixed w-48 px-4 py-4 text-lg font-semibold bg-green-600 rounded-b-xl shadow-lg flex items-center justify-center">
+        <Link to="/Homepage">
           <h1>PrivacyPatterns</h1>
-        </a>
+        </Link>
       </div>
     </header>
   );

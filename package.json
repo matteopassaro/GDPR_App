@@ -13,6 +13,7 @@
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "mdb-react-ui-kit": "^8.0.0",
     "node-sass": "^9.0.0",
     "postcss": "^8.4.38",
     "react": "^18.3.1",
