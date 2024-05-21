@@ -24,6 +24,7 @@ interface Pattern {
   id: number;
   attributes: Attributes;
 }
+
 function PatternsPage() {
   const [error, setError] = useState<Error | null>(null);
   const [patterns, setPatterns] = useState<Pattern[]>([]);
